@@ -31,7 +31,7 @@ class CarList extends Component {
                 <div> {car.make}</div>
                 <div> {car.name}</div>
                 <div> {car.model}</div>
-                <div> Availability: </div>
+                <div> Availability: {car.available} </div>
               </span>
               <hr />
               <p>{car.body}</p>
