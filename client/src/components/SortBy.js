@@ -9,11 +9,13 @@ const styles = {
 };
 
 const SortBy = () => (
+  <div className="col s12 m3">
   <div style={styles.wrapper} className="card">
     <SortButton sortType="available" />
     <SortButton sortType="name" />
     <SortButton sortType="make" />
     <SortButton sortType="year" />
+  </div>
   </div>
 );
 

@@ -7,10 +7,6 @@ const styles = {
     height: 25,
     width: '100%',
   },
-  wrapper: {
-    marginBottom: 40,
-    minWidth: '100%',
-  },
 };
 
 const SortButton = ({sortType, sortBy}) => (

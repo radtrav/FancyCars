@@ -7,10 +7,6 @@ const styles = {
     paddingRight: 40,
     paddingTop: 5,
   },
-  icon: {
-    color: 'teal',
-    fontSize: 56,
-  },
 };
 
 class Header extends Component {

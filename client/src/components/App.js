@@ -6,9 +6,10 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 const styles = {
-  container: {
-    backgroundColor: '#f9f9f9',
-    minHeight: 'calc(100vh - 132px)',
+  main: {
+    marginBottom: 0,
+    padding: 40,
+    height: 'calc(100vh - 80px)',
   },
 };
 
@@ -19,27 +20,14 @@ class App extends Component {
   }
 
   render() {
-
-    console.log('render cars', this.props.cars);
-    return (
-      <div style={styles.container}>
-        <Header />
-        <div style={{ padding: 40 }} className="row">
-          <div className="col s12 m3">
-            <SortBy />
-          </div>
-          <div
-            style={{ height: 'calc(100vh - 160px)', overflowY: 'auto' }}
-            className="col m9"
-          >
-            <CarList cars={this.props.cars} />
-          </div>
-        </div>
-      </div>
-    );
+    return [
+      <Header key="header" />,
+      <div className="row" key="main" style={styles.main}>
+        <SortBy />
+        <CarList cars={this.props.cars} />
+      </div>,
+    ];
   }
 }
-
-
 
 export default connect(null, actions)(App);
