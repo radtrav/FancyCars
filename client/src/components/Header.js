@@ -16,7 +16,7 @@ const styles = {
 
 const Header = () => (
   <nav style={styles.navWrapper} className="nav-wrapper teal darken-4">
-    <div style={styles.logo}>FANCY CARS</div>
+    <div style={styles.logo}>FANCY CARS </div>
   </nav>
 );
 

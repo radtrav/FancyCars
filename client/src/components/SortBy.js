@@ -3,14 +3,15 @@ import SortButton from './SortButton';
 
 const styles = {
   wrapper: {
-    marginBottom: 40,
+    fontWeight: 500,
+    marginBottom: 20,
     minWidth: '100%',
   },
 };
 
 const SortBy = () => (
   <div className="col s12 m3">
-  <div style={styles.wrapper} className="card">
+  <div style={styles.wrapper}>
     <SortButton sortType="available" />
     <SortButton sortType="name" />
     <SortButton sortType="make" />

@@ -8,8 +8,7 @@ import * as actions from '../actions';
 const styles = {
   main: {
     marginBottom: 0,
-    padding: 40,
-    height: 'calc(100vh - 80px)',
+    padding: 20,
   },
 };
 
