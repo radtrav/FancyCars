@@ -25,12 +25,12 @@ class App extends Component {
       <div style={styles.container}>
         <Header />
         <div style={{ padding: 40 }} className="row">
-          <div className="col s3">
+          <div className="col s12 m3">
             <SortBy />
           </div>
           <div
             style={{ height: 'calc(100vh - 160px)', overflowY: 'auto' }}
-            className="col s9"
+            className="col m9"
           >
             <CarList cars={this.props.cars} />
           </div>

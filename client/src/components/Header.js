@@ -16,8 +16,7 @@ const styles = {
 class Header extends Component {
   renderContent() {
     return [
-      <li key="4">
-        <a href="" />
+      <li key="1">
         <a href="/">
           Home
         </a>

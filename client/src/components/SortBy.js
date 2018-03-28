@@ -1,53 +1,20 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
+import React from 'react';
+import SortButton from './SortButton';
 
 const styles = {
-  button: {
-    height: 60,
-    width: '100%',
+  wrapper: {
+    marginBottom: 40,
+    minWidth: '100%',
   },
 };
 
-class SortBy extends Component {
-  render() {
-    return (
-      <div style={{ height: 200 }} className="card">
-        <div>
-          <button
-            style={styles.button}
-            onClick={() => this.props.sortBy('available')}
-          >
-            Sort By Availability
-          </button>
-        </div>
-        <div>
-          <button
-            style={styles.button}
-            onClick={() => this.props.sortBy('name')}
-          >
-            Sort By Name
-          </button>
-        </div>
-        <div>
-          <button
-            style={styles.button}
-            onClick={() => this.props.sortBy('year')}
-          >
-            Sort By Year
-          </button>
-        </div>
-        <div>
-          <button
-            style={styles.button}
-            onClick={() => this.props.sortBy('make')}
-          >
-            Sort By Make
-          </button>
-        </div>
-      </div>
-    );
-  }
-}
+const SortBy = () => (
+  <div style={styles.wrapper} className="card">
+    <SortButton sortType="available" />
+    <SortButton sortType="name" />
+    <SortButton sortType="make" />
+    <SortButton sortType="year" />
+  </div>
+);
 
-export default connect(null, actions)(SortBy);
+export default SortBy;

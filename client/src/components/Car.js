@@ -7,8 +7,9 @@ const styles = {
   image: {
     margin: 15,
     backgroundColor: 'lightgrey',
-    height: 150,
-    width: 200,
+    maxWidth: '100%',
+    maxHeight: '100%',
+    minWidth: '100%',
   },
   imageWrapper: {
     display: 'flex',
@@ -32,11 +33,11 @@ const Car = ({ car }) => (
     <div className="row">
       <div
         style={styles.imageWrapper}
-        className="col s4 center-align valign-wrapper"
+        className="col m4 center-align valign-wrapper"
       >
         <img src={car.img} style={styles.image} alt="" />
       </div>
-      <div className="col s8 card-content">
+      <div className="col m8 card-content">
         <span className="card-title">
           <div style={styles.name}>{car.name}</div>
           <span style={styles.make}> Make: {car.make}</span>
@@ -47,7 +48,7 @@ const Car = ({ car }) => (
         <hr />
         <div style={styles.buyButton}>
           {car.available === 'In Dealership' ? (
-            <button className="waves-effect light-green btn">BUY</button>
+            <button className="btn">BUY</button>
           ) : (
             <button className="waves-effect grey btn">{car.available}</button>
           )}
