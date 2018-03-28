@@ -1,42 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Car from './Car';
 import { connect } from 'react-redux';
 
-import { fetchCars } from '../actions/index';
+const sortBy = (cars, sortType) => {
+  return cars.sort((a, b) => a[sortType] > b[sortType]);
+};
 
-class CarList extends Component {
-  componentDidMount() {
-    this.props.fetchCars();
-  }
-  renderCars() {
-    if (!this.props.cars.length) {
-      return <div className="center">Loading ...</div>;
-    }
-    return this.props.cars.reverse().map(car => <Car car={car} />
-    );
-  }
+const CarList = ({ cars, sort }) => {
+  console.log('cars and sort', cars, sort );
+  return (
+    <div>
+      {cars.length ? (
+        cars.map(car => <Car key={car.id} car={car} />)
+      ) : (
+        <div className="center">Loading ...</div>
+      )}
+    </div>
+  );
+};
+const mapStateToProps = ({ cars, sort }) => ({
+  cars: sortBy(cars, sort),
+  sort,
+});
 
-  render() {
-    return (
-      <div>
-        <div
-          className="center"
-          style={{
-            fontSize: 40,
-            marginBottom: 20,
-            marginTop: 20,
-            fontWeight: 600,
-          }}
-        >
-          Cars
-        </div>
-        <hr />
-        {this.renderCars()}
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = ({ cars }) => ({ cars });
-
-export default connect(mapStateToProps, { fetchCars })(CarList);
+export default connect(mapStateToProps)(CarList);

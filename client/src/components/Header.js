@@ -18,19 +18,17 @@ class Header extends Component {
     return [
       <li key="4">
         <a href="/">Home</a>
-      </li>
+      </li>,
     ];
   }
 
   render() {
     return (
-      <nav className="navbar-fixed">
-        <div style={styles.navWrapper} className="nav-wrapper black">
-          <div>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              {this.renderContent()}
-            </ul>
-          </div>
+      <nav style={styles.navWrapper} className="nav-wrapper black">
+        <div>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            {this.renderContent()}
+          </ul>
         </div>
       </nav>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CarList from './CarList';
 import Header from './Header';
+import SortBy from './SortBy';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
@@ -13,29 +14,32 @@ const styles = {
 
 class App extends Component {
   componentDidMount() {
-    //this.props.fetchUser();
+    console.log('mounted');
+    this.props.fetchCars();
   }
 
   render() {
+
+    console.log('render cars', this.props.cars);
     return (
       <div style={styles.container}>
         <Header />
-        <div style={{padding: 30}} class="row">
-          <div class="col s3">
-            <div style={{ marginTop: 50, height: 200 }} class="card">
-              Filter Filter Filter Filter Filter Filter Filter
-            </div>
+        <div style={{ padding: 40 }} className="row">
+          <div className="col s3">
+            <SortBy />
           </div>
           <div
-            style={{ height: 'calc(100vh - 80px)', overflowY: 'auto' }}
-            class="col s9"
+            style={{ height: 'calc(100vh - 160px)', overflowY: 'auto' }}
+            className="col s9"
           >
-            <CarList />
+            <CarList cars={this.props.cars} />
           </div>
         </div>
       </div>
     );
   }
 }
+
+
 
 export default connect(null, actions)(App);

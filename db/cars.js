@@ -2,7 +2,7 @@ module.exports = [
   {
     id: 1,
     img: 'https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/fv8AAOSwm-ZaubXl/$_59.JPG',
-    name: '2016 Mitsubishi LANCER ES FWD',
+    name: 'Mitsubishi LANCER ES FWD 2016 ',
     make: 'Mitsubishi',
     model: 'Lancer',
     year: 2016,
@@ -18,7 +18,7 @@ module.exports = [
   {
     id: 3,
     img: 'https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/ivYAAOSwol5Yyo-m/$_59.JPG',
-    name: '2015 Chevrolet Corvette',
+    name: 'Chevrolet Corvette 2015 ',
     make: 'Chevrolet',
     model: 'Corvette',
     year: 2015,
@@ -26,7 +26,7 @@ module.exports = [
   {
     id: 4,
     img: 'https://i.ebayimg.com/00/s/NjAwWDEwMjQ=/z/93AAAOSwacVauZGK/$_35.JPG',
-    name: '2013 Mercedes-Benz C-Class C 350 4MATIC NAVIGATION, PUSH BUTTON',
+    name: 'Mercedes-Benz C-Class C 350 4MATIC NAVIGATION, PUSH BUTTON 2013',
     make: 'Mercedes-Benz',
     model: 'C-Class',
     year: 2013,
@@ -34,7 +34,7 @@ module.exports = [
   {
     id: 5,
     img: 'https://i.ebayimg.com/00/s/OTM2WDEyODA=/z/GH8AAOSwwB1aupK7/$_35.JPG',
-    name: '2013 Audi S5 Convertible|Red Interior|Navigation',
+    name: 'Audi S5 Convertible|Red Interior|Navigation 2013',
     make: 'Audi',
     model: 'S5',
     year: 2013,
@@ -42,7 +42,7 @@ module.exports = [
   {
     id: 6,
     img: 'https://i.ebayimg.com/00/s/ODAwWDgwMA==/z/lSQAAOSwy0JaKVqw/$_59.JPG',
-    name: '2010 Smart Fortwo Coupe (2 door)',
+    name: 'Smart Fortwo Coupe (2 door) 2010',
     make: 'Smart',
     model: 'Fortwo',
     year: 2010,
@@ -50,7 +50,7 @@ module.exports = [
   {
     id: 7,
     img: 'https://i.ebayimg.com/00/s/NDgwWDY0MA==/z/qG0AAOSw2PtauoKY/$_35.JPG',
-    name: '2006 BMW Z4 M',
+    name: 'BMW Z4 M 2006',
     make: 'BMW',
     model: 'Z4 M',
     year: 2006,
@@ -58,25 +58,25 @@ module.exports = [
   {
     id: 8,
     img: 'https://i.ebayimg.com/00/s/ODAwWDYwMA==/z/dTIAAOSwPNNauoDd/$_35.JPG',
-    name: '2000 Acura Integra Coupe - Etested Ready to GO!',
+    name: 'Acura Integra Coupe 2000 - Etested Ready to GO! ',
     make: 'Acura',
     model: 'Integra',
     year: 2000,
   },
   {
     id: 9,
-    img: 'https://i.ebayimg.com/00/s/NDgwWDY0MA==/z/qG0AAOSw2PtauoKY/$_35.JPG',
-    name: '2006 BMW Z4 M',
+    img: 'https://www.cstatic-images.com/supersized/in/0f2629633580e995189c49867aff4509.jpg',
+    name: 'BMW M3 Base 2015',
     make: 'BMW',
-    model: 'Z4 M',
-    year: 2006,
+    model: 'M3 Base',
+    year: 2015,
   },
   {
     id: 10,
     img: 'https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/nwEAAOSwgLdaueM8/$_35.JPG',
-    name: '2014 Honda Accord EX-L C0UPE AUT0 NAVI LEATHER SUNROOF 95K',
+    name: 'Honda Accord EX-L 2014 C0UPE AUT0 NAVI LEATHER SUNROOF 95K',
     make: 'Honda',
     model: 'Accord',
-    year: 2000,
+    year: 2014,
   },
 ];
