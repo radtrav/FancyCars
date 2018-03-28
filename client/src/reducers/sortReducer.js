@@ -1,21 +1,14 @@
-import {
-  SORT_BY_NAME,
-  SORT_BY_AVAILABILITY,
-  SORT_BY_YEAR,
-  SORT_BY_MAKE,
-} from '../actions/types';
+import { SORT_BY } from '../actions/types';
 
 export default function(state = 'name', action) {
   switch (action.type) {
-    case SORT_BY_NAME:
-      return 'name';
-    case SORT_BY_MAKE:
-      return 'make';
-    case SORT_BY_YEAR:
-      return 'year';
-    case SORT_BY_AVAILABILITY:
-      return 'available';
+    case SORT_BY:
+      return action.sortType;
     default:
       return state;
   }
 }
+
+export const sortBy = (cars, sortType) => {
+  return cars.sort((a, b) => a[sortType] > b[sortType]);
+};

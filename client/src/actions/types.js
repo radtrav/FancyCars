@@ -5,3 +5,4 @@ export const SORT_BY_NAME = 'sort_by_name';
 export const SORT_BY_MAKE = 'sort_by_make';
 export const SORT_BY_YEAR = 'sort_by_year';
 export const SORT_BY_AVAILABILITY = 'sort_by_availability';
+export const SORT_BY = 'sort_by';

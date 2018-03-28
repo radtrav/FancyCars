@@ -17,7 +17,10 @@ class Header extends Component {
   renderContent() {
     return [
       <li key="4">
-        <a href="/">Home</a>
+        <a href="" />
+        <a href="/">
+          Home
+        </a>
       </li>,
     ];
   }

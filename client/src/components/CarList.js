@@ -1,13 +1,9 @@
 import React from 'react';
 import Car from './Car';
 import { connect } from 'react-redux';
-
-const sortBy = (cars, sortType) => {
-  return cars.sort((a, b) => a[sortType] > b[sortType]);
-};
+import { sortBy } from '../reducers/sortReducer';
 
 const CarList = ({ cars, sort }) => {
-  console.log('cars and sort', cars, sort );
   return (
     <div>
       {cars.length ? (

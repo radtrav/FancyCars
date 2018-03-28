@@ -7,6 +7,7 @@ import {
   SORT_BY_MAKE,
   SORT_BY_YEAR,
   SORT_BY_AVAILABILITY,
+  SORT_BY,
 } from './types';
 
 
@@ -19,6 +20,11 @@ export const fetchCars = () => async dispatch => {
     dispatch({ type: FETCH_CARS_FAILURE, payload: err });
   }
 };
+
+export const sortBy = (sortType) => ({
+  sortType,
+  type: SORT_BY,
+});
 
 export const sortByName = () => ({
   type: SORT_BY_NAME,

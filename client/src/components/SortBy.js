@@ -2,19 +2,52 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
+const styles = {
+  button: {
+    height: 60,
+    width: '100%',
+  },
+};
+
 class SortBy extends Component {
   render() {
     return (
       <div style={{ height: 200 }} className="card">
-        <button onClick={() => this.props.sortByAvailability()}>Sort By Availability</button>
-        <button onClick={() => this.props.sortByName()}> Sort By Name</button>
-        <button onClick={() => this.props.sortByYear()}> Sort By Year</button>
-        <button onClick={() => this.props.sortByMake()}> Sort By Make</button>
+        <div>
+          <button
+            style={styles.button}
+            onClick={() => this.props.sortBy('available')}
+          >
+            Sort By Availability
+          </button>
+        </div>
+        <div>
+          <button
+            style={styles.button}
+            onClick={() => this.props.sortBy('name')}
+          >
+            Sort By Name
+          </button>
+        </div>
+        <div>
+          <button
+            style={styles.button}
+            onClick={() => this.props.sortBy('year')}
+          >
+            Sort By Year
+          </button>
+        </div>
+        <div>
+          <button
+            style={styles.button}
+            onClick={() => this.props.sortBy('make')}
+          >
+            Sort By Make
+          </button>
+        </div>
       </div>
     );
   }
 }
-
-const mapDispatchToProps = () => ({});
 
 export default connect(null, actions)(SortBy);

@@ -46,8 +46,10 @@ const Car = ({ car }) => (
         </span>
         <hr />
         <div style={styles.buyButton}>
-          {car.available === 'In Dealership' && (
-            <button className="waves-effect waves-light btn">BUY</button>
+          {car.available === 'In Dealership' ? (
+            <button className="waves-effect light-green btn">BUY</button>
+          ) : (
+            <button className="waves-effect grey btn">{car.available}</button>
           )}
         </div>
       </div>
