@@ -1,7 +1,7 @@
 # Fancy Cars
 > View Fancy Pancy Cars!
 
-This was made as part of a Walmart interview take home question
+This was made as part of an interview take home question
 
 ## Installation
 

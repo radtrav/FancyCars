@@ -15,7 +15,7 @@ module.exports = app => {
 
   app.get('/api/availability', (req, res) => {
     const id = req.params.id;
-    const availability = AvailabilityService.findById(car.id);
+    const availability = AvailabilityService.findById(id);
     res.send(availability);
   });
 };
