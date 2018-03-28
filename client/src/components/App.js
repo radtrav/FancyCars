@@ -15,7 +15,6 @@ const styles = {
 
 class App extends Component {
   componentDidMount() {
-    console.log('mounted');
     this.props.fetchCars();
   }
 

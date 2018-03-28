@@ -1,59 +1,44 @@
 import React from 'react';
+import BuyButton from './BuyButton';
+import CarProperty from './CarProperty';
 
 const styles = {
-  buyButton: {
-    marginTop: 20,
-  },
   image: {
-    margin: 15,
     backgroundColor: 'lightgrey',
-    maxWidth: '100%',
+    margin: 15,
     maxHeight: '100%',
+    maxWidth: '100%',
     minWidth: '100%',
   },
   imageWrapper: {
+    alignItems: 'center',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
   },
   name: {
     fontSize: 18,
     fontWeight: 600,
   },
-  make: {
-    fontSize: 14,
-    fontWeight: 400,
-    marginRight: 20,
-    color: 'grey',
+  wrapper: {
+    margin: 0,
   },
 };
 
 const Car = ({ car }) => (
-  <div style={{ padding: 0 }} key={car.id} className="card darken- 1">
-    <div className="row">
-      <div
-        style={styles.imageWrapper}
-        className="col m4 center-align valign-wrapper"
-      >
-        <img src={car.img} style={styles.image} alt="" />
-      </div>
-      <div className="col m8 card-content">
-        <span className="card-title">
-          <div style={styles.name}>{car.name}</div>
-          <span style={styles.make}> Make: {car.make}</span>
-          <span style={styles.make}> Model: {car.model}</span>
-          <span style={styles.make}> Year: {car.year}</span>
-          <span style={styles.make}> Availability: {car.available}</span>
-        </span>
-        <hr />
-        <div style={styles.buyButton}>
-          {car.available === 'In Dealership' ? (
-            <button className="btn">BUY</button>
-          ) : (
-            <button className="waves-effect grey btn">{car.available}</button>
-          )}
-        </div>
-      </div>
+  <div style={styles.wrapper} className="card row" key={car.id}>
+    <div style={styles.imageWrapper} className="col m4 center-align">
+      <img src={car.img} style={styles.image} alt="" />
+    </div>
+    <div className="col m8 card-content">
+      <span className="card-title">
+        <div style={styles.name}>{car.name}</div>
+        <CarProperty label="Make" property={car.make} />
+        <CarProperty label="Model" property={car.model} />
+        <CarProperty label="Year" property={car.year} />
+        <CarProperty label="Availability" property={car.available} />
+      </span>
+      <hr />
+      <BuyButton available={car.available} />
     </div>
   </div>
 );

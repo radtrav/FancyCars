@@ -1,6 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const styles = {
+  logo: {
+    fontFamily: 'helvetica',
+    fontSize: 26,
+    fontWeight: 600,
+  },
   navWrapper: {
     height: 80,
     paddingLeft: 40,
@@ -9,28 +14,10 @@ const styles = {
   },
 };
 
-class Header extends Component {
-  renderContent() {
-    return [
-      <li key="1">
-        <a href="/">
-          Home
-        </a>
-      </li>,
-    ];
-  }
-
-  render() {
-    return (
-      <nav style={styles.navWrapper} className="nav-wrapper black">
-        <div>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            {this.renderContent()}
-          </ul>
-        </div>
-      </nav>
-    );
-  }
-}
+const Header = () => (
+  <nav style={styles.navWrapper} className="nav-wrapper teal darken-4">
+    <div style={styles.logo}>FANCY CARS</div>
+  </nav>
+);
 
 export default Header;

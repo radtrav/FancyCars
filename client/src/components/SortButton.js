@@ -4,7 +4,7 @@ import * as actions from '../actions';
 
 const styles = {
   button: {
-    height: 25,
+    height: 35,
     width: '100%',
   },
 };
