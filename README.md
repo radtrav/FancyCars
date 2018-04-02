@@ -9,6 +9,7 @@ This was made as part of an interview take home question
 npm install
 cd client/
 npm install
+cd ..
 npm run dev
 ```
 
