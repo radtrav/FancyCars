@@ -26,16 +26,3 @@ export const sortBy = (sortType) => ({
   type: SORT_BY,
 });
 
-export const sortByName = () => ({
-  type: SORT_BY_NAME,
-});
-
-export const sortByMake = () => ({
-  type: SORT_BY_MAKE,
-});
-export const sortByAvailability = () => ({
-  type: SORT_BY_AVAILABILITY,
-});
-export const sortByYear = () => ({
-  type: SORT_BY_YEAR,
-});
